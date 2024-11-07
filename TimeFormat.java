@@ -22,7 +22,9 @@ public class TimeFormat {
 		if (hours > 12){
 			timeOfDay = "PM";
 			hours = hours % 12;
-		} else{
+		} else if (hours == 12){
+			timeOfDay = "PM";
+		}else{
 			timeOfDay = "AM";
 		}
 
