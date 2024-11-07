@@ -21,12 +21,11 @@ public class TimeFormat {
 		String timeOfDay = "";
 		if (hours > 12){
 			timeOfDay = "PM";
+			hours = hours % 12;
 		} else{
 			timeOfDay = "AM";
 		}
 
-		hours = hours % 12;
-		
 		System.out.println(hours + ":" + minutesString + " " + timeOfDay);
 	}
 }
